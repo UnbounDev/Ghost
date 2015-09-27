@@ -20,6 +20,15 @@ config = {
             },
             debug: false
         },
+        storage: {
+            active: 'ghost-s3',
+            'ghost-s3': {
+                region: '',
+                bucket: '',
+                accessKeyId: '',
+                secretAccessKey: ''
+            }
+        },
 
         server: {
             host: '127.0.0.1',
@@ -56,6 +65,15 @@ config = {
                 filename: path.join(__dirname, '/content/data/ghost-dev.db')
             },
             debug: false
+        },
+        storage: {
+            active: 'ghost-s3',
+            'ghost-s3': {
+                region: '',
+                bucket: '',
+                accessKeyId: '',
+                secretAccessKey: ''
+            }
         },
         // #### Server
         // Can be host & port (default), or socket
@@ -99,11 +117,11 @@ config = {
         database: {
             client: 'mysql',
             connection: {
-                host     : '127.0.0.1',
-                user     : 'root',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
+                host: '127.0.0.1',
+                user: 'root',
+                password: '',
+                database: 'ghost_testing',
+                charset: 'utf8'
             }
         },
         server: {
@@ -120,11 +138,11 @@ config = {
         database: {
             client: 'pg',
             connection: {
-                host     : '127.0.0.1',
-                user     : 'postgres',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
+                host: '127.0.0.1',
+                user: 'postgres',
+                password: '',
+                database: 'ghost_testing',
+                charset: 'utf8'
             }
         },
         server: {
