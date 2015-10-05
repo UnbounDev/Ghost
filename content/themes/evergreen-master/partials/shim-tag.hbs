@@ -1,0 +1,27 @@
+<section id="tag" class="shim">
+    {{#if image}}
+      <header class="image" style="background: url({{image}}) no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+        <div class="wrapper">
+          <div class="center">
+            <a href="{{url absolute="true"}}"><h1>{{name}}</h1></a>
+            {{#if description}}
+              <p>{{description}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </header>
+    {{else}}
+      <header class="noimage">
+        <a href="{{url absolute="true"}}"><h1>{{name}}</h1></a>
+        {{#if description}}
+          <p>{{description}}</p>
+        {{/if}}
+      </header>
+    {{/if}}
+  <footer>
+    <p>{{pagination.total}} posts</p>
+  </footer>
+</section>
+<script>
+  $("#tag .center").centerThis("#tag header");
+</script>

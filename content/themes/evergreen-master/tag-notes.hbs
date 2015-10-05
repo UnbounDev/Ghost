@@ -1,0 +1,15 @@
+{{!< default}}
+{{! tag template}}
+<section id="loop">
+  {{> "tt-loop" show="!note"}}
+  {{#if posts}}
+    {{pagination}}
+  {{/if}}
+</section>
+<script>
+  $offset = "300";
+  $("#site-shim").shimThis({
+    ontop: 'section.hero',
+    offset: $offset+'px'
+  });
+</script>
